@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+    <link rel="stylesheet" href="styles/main.css" />
+    <title>Python Network Applications</title>
+</head>
+
+<body>
+    <!-- The Main div that encloses everything -->
+    <div id="container--main">
+
+        <!-- The simple top navigation area -->
+        <section id="wrapper--navigation" class="section--nav">
+            <div>
+                <span class="nav--company">RedDirt</span>
+            </div>
+            <div class="nav--menu">
+                <a href="#">Home</a>
+                <a href="#">About</a>
+            </div>
+        </section>
+
+        <!-- The "billboard".  Simply an area to separate the navigation zone from the application zone -->
+        <section id="wrapper--billboard" class="section--billboard">
+            <div>
+                <h1>Python Automation Toolkit</h1>
+                <p>Like a carpenter. &nbsp;Thinking one step ahead.</p>
+            </div>
+            <div>
+                <img src="images/pyautomate.png" alt="Python Automation" />
+            </div>
+        </section>
+
+        <!-- Intro to the applications -->
+        <section id="wrapper--info" class="section--info">
+            <p>
+                The Python Automation Toolkit is a collection of various Python automation tools. Probably more
+                <i>tool</i> than automation as some were written to accomplish specific tasks. Though, each should still
+                save considerable time should they be needed.
+            </p>
+        </section>
+
+        <!-- Each application in its own div with a link to run the application -->
+        <section id="wrapper--app_list" class="section--appinfo">
+            <div class="app--box">
+                <h2><i class="fa-solid fa-server"></i><a href="dnslookup.html">DNS Lookup</a></h2>
+                <p class="app--description">Perform forward and reverse DNS lookups</p>
+            </div>
+            <div class="app--box">
+                <h2><i class="fa-solid fa-map-location-dot"></i><a href="#">Port Maps</a></h2>
+                <p class="app--description">Map the ARP table of a core device to switch ports</p>
+            </div>
+            <div class="app--box">
+                <h2><i class="fa-solid fa-route"></i><a href="#">Route Differ</a></h2>
+                <p class="app--description">Post and Pre-Migration routing table comparison</p>
+            </div>
+        </section>
+    </div>
+</body>
+
+</html>

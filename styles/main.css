@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@300;400;500;600;700&display=swap');
+
+/* Variables for colors with an eye on a light/dark them, eventually */
+:root {
+    --mainTextColor-light: #000;
+    --secondaryTextColor-light: rgb(51 51 51);
+    --mainLinkColor-light: #ffac00;
+    --mainBorderColor-light: rgb(218, 218, 218);
+    --mainBgColor-light: rgb(249, 250,251);
+
+    --mainTextColor-dark: #fff;
+    --secondaryTextColor-dark: #adb0b1;
+    --mainLinkColor-dark: #ffac00;
+    --mainBorderColor-dark: #2b3031;
+    --mainBgColor-dark: #222324;
+
+    --boxesbgcolor: #0757cfa9;
+    
+    --mainTextColor: var(--mainTextColor-dark);
+    --secondaryTextColor: var(--secondaryTextColor-dark);
+    --mainLinkColor: var(--mainLinkColor-dark);
+    --mainBorderColor: var(--mainBorderColor-dark);
+    --mainBgColor: var(--mainBgColor-dark);
+}
+
+/* Global CSS */
+*{
+    font-family: "Readex Pro";
+    line-height: 1.25em;
+    box-sizing: border-box;
+    color: var(--mainTextColor);
+}
+
+body {
+    background-color: var(--mainBgColor-dark);
+}
+p, span, li {
+    font-size: 1em;
+}
+
+a {
+    text-decoration: none;
+    font-weight: 500;
+}
+
+#container--main {
+    max-width: 95%;
+    margin: 0 auto;
+}
+
+/* Start styling for navigation zone */
+#wrapper--navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 2em;
+    padding-right: 2em;
+    padding-bottom: 1em;
+}
+
+.section--nav .nav--company {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.section--nav .nav--menu a {
+    padding-left: 1em;
+}
+
+.section--nav .nav--menu a:hover {
+    color: var(--mainLinkColor-dark);
+}
+
+/* Start styling for billboard zone */
+#wrapper--billboard {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--boxesbgcolor);
+    padding-top: .5em;
+    padding-left: 3em;
+    padding-right: 3em;
+    border-radius: .5em;
+}
+
+.section--billboard h1 {
+    font-size: 1.75em;
+    font-weight: 700;
+    line-height: .25;
+}
+
+.section--billboard img {
+    max-width: 225px;
+}
+
+/* Start styling for the application info zone */
+#wrapper--info {
+    padding: 1em 1em;
+}
+
+/* Start styling for the application boxes */
+#wrapper--app_list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.app--box {
+    background-color: var(--boxesbgcolor);
+    padding: 1em;
+    border-radius: .5em;
+    box-shadow: 0 .25em .25em rgb(0, 0, 0, 0.6);
+    margin: 1em 1em;
+    width: 100%;
+}
+
+.app--box .app--description {
+    font-size: 1em;
+}
+
+.app--box a {
+    text-decoration: none;
+    font-size: 1em;
+    font-weight: 500;
+}
+
+.app--box a:hover {
+    color: var(--mainLinkColor-dark);
+}
+
+.app--box i {
+    margin-right: .5em;
+}
+
+/* Start styling for responsiveness */
+@media (max-width: 768px) {
+    #wrapper--applications,
+    #wrapper--billboard {
+        flex-direction: column;
+    }
+
+    .section--billboard h1 {
+        font-size: 1.5em;
+        line-height: .5em;
+    }
+
+    .section--billboard img {
+        max-width: 175px;
+    }
+
+    .section--info p {
+        font-size: .9em;
+    }
+
+    .app--box h2 {
+        font-size: 1.1em;
+    }
+}

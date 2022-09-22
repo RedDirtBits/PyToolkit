@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+    <link rel="stylesheet" href="styles/main.css" />
+    <link rel="stylesheet" href="styles/forms.css" />
+    <title>Python Network Applications</title>
+</head>
+
+<body>
+    <!-- The Main div that encloses everything -->
+    <div id="container--main">
+
+        <!-- The simple top navigation area -->
+        <section id="wrapper--navigation" class="section--nav">
+            <div>
+                <span class="nav--company">RedDirt</span>
+            </div>
+            <div class="nav--menu">
+                <a href="index.html">Home</a>
+                <a href="#">About</a>
+            </div>
+        </section>
+
+        <!-- The "billboard".  Simply an area to separate the navigation zone from the application zone -->
+        <section id="wrapper--billboard" class="section--billboard">
+            <div>
+                <h1>Python Automation Toolkit</h1>
+                <p>Like a carpenter. &nbsp;Thinking one step ahead.</p>
+            </div>
+            <div>
+                <img src="images/pyautomate.png" alt="Python Automation" />
+            </div>
+        </section>
+
+        <!-- Intro to the applications -->
+        <section id="wrapper--info" class="section--info">
+            <h1>Python DNS Lookup Utility</h1>
+            <p>
+                The Python DNS Lookup tool performs both forward and reverse DNS lookups
+            </p>
+            <p>
+                Using the application is as straight forward as it appears.  Select whether you want to perform a lookup using a hostname or IP address and click on the <i>Lookup</i> button.
+            </p>
+        </section>
+
+        <section id="wrapper--application">
+            <div id="application--form">
+                <h2>DNS Lookup Form</h2>
+                <form action="/">
+                    <hr>
+                    <div id="application--lookup_type">
+                        <div class="hostname_lookup">
+                            <input id="hostname" type="radio" value="none" name="dns_lookup" checked />
+                            <label for="hostname" class="radio">Hostname</label>
+                        </div>
+
+                        <div class="ipaddress_lookup">
+                            <input type="radio" value="none" id="ipaddress" name="dns_lookup" />
+                            <label for="ipaddress" class="radio">IP Address</label>
+                        </div>                        
+                    </div>
+                    <hr>
+                    <div id="application--input">
+                        <!-- <label id="icon" for="host"><i class="fa-solid fa-desktop"></i></label> -->
+                        <input id="host_textbox" type="text" name="host" placeholder="Hostname or IP Address" required />
+                    </div>
+                    <div id="application--submit_button">
+                        <button id="submit_lookup" type="submit" href="/">Lookup</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </div>
+</body>
+
+</html>
