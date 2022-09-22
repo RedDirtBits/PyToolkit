@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+    <link rel="stylesheet" href="styles/main.css" />
+    <link rel="stylesheet" href="styles/port_map_form_styles.css" />
+    <title>Python Network Applications</title>
+</head>
+
+<body>
+    <!-- The Main div that encloses everything -->
+    <div id="container--main">
+
+        <!-- The simple top navigation area -->
+        <section id="wrapper--navigation" class="section--nav">
+            <div>
+                <span class="nav--company">RedDirt</span>
+            </div>
+            <div class="nav--menu">
+                <a href="index.html">Home</a>
+                <a href="#">About</a>
+            </div>
+        </section>
+
+        <!-- The "billboard".  Simply an area to separate the navigation zone from the application zone -->
+        <section id="wrapper--billboard" class="section--billboard">
+            <div>
+                <h1>Python Automation Toolkit</h1>
+                <p>Like a carpenter. &nbsp;Thinking one step ahead.</p>
+            </div>
+            <div>
+                <img src="images/pyautomate.png" alt="Python Automation" />
+            </div>
+        </section>
+
+        <!-- Intro to the applications -->
+        <section id="wrapper--info">
+            <div class="application--info">
+                <h1>Port Mapping Utility</h1>
+                <p>
+                    The python Port Mapping Utility is an application born out of a need to correlate the IP addresses
+                    of a core device (Router or Switch) resulting from the running of the command <i>show ip arp</i> to
+                    the actual switch port that IP address shows up on. In short it scales up what one might do manually
+                    if trying to trace a MAC address to a particular switch and port.
+                </p>
+                <h1>Usage</h1>
+                <p>
+                    Use of the Port Mapper requires two bits of information:
+
+                <ol>
+                    <li>Core device IP address</li>
+                    <li>A list of switch IP addresses</li>
+                    <li>The trunk/uplink port(s) on the switches</li>
+                    <li>Login credentials (username, password, enable password)</li>
+                </ol>
+
+                There is currently not an option to map a single IP Address to a switch port. The Port Mapper will log
+                into the core device and part the ARP table. It will then log into each switch provided and search for
+                any MAC addresses found in the core device ARP table. If the port the MAC address is found on is not one
+                of the trunk/uplink ports it will be recorded as a mapping which includes the IP address in the ARP
+                table, the MAC address, the switch device name where the match was found and the vlan the port is on.
+                </p>
+            </div>
+        </section>
+
+        <section id="wrapper--application">
+            <div id="application--form">
+                <h2>Port Maps</h2>
+                <form action="/">
+                    <hr>
+                    <div id="application--coreip">
+                        <div class="coreip--label">
+                            <label id="coreip">Core IP:</label>
+                        </div>
+                        <div class="coreip--text">
+                            <input id="coreip_textbox" type="text" name="host" placeholder="Enter Core IP Address" required />
+                        </div>
+                    </div>
+                    <div id="application--switchips">
+                        <div class="switchips--label">
+                            <label id="switches">Switch IP's:</label>
+                        </div>
+                        <div class="switchips--text">
+                            <textarea id="switchips_textbox" rows="7" cols="25" name="text"
+                                placeholder="Enter Switch IP Addresses" required></textarea>
+                        </div>
+                    </div>
+                    <div id="application--uplinks">
+                        <div class="uplinks--label">
+                            <label id="uplinks">Trunk/Uplink Ports:</label>
+                        </div>
+                        <div class="uplinks--text">
+                            <textarea id="uplinks_textbox" rows="7" cols="25" name="text"
+                                placeholder="Enter Trunk/Uplink Ports"></textarea>
+                        </div>
+                    </div>
+                    <div id="application--submit_button">
+                        <button id="submit_mapports" type="submit" href="/">Map Ports</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </div>
+</body>
+
+</html>

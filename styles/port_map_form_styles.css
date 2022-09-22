@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@300;400;500;600;700&display=swap');
+
+/* Variables for colors with an eye on a light/dark them, eventually */
+:root {
+    --formButtonColor: #0757cfa9;
+    --formBgColor: #6d6d6d;
+    --formHrColor: #ffac00;
+    --formButtonHoverColor: #ffac00;
+    --formDefaultTextColor: #000;
+}
+
+::placeholder {
+    text-align: center;
+}
+
+.application--info {
+    margin-bottom: 3em;
+}
+
+#application--form {
+    max-width: 550px;
+    margin: 0 auto;
+    background-color: var(--formBgColor);
+    border-radius: .5em;
+}
+
+#application--form h2 {
+    text-align: center;
+    padding-top: .5em;
+}
+
+#application--form hr {
+    width: 90%;
+    border: 1px solid var(--formHrColor);
+}
+
+#application--coreip {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2em;
+    margin-left: 2em;
+    margin-right: 2em;
+}
+
+.coreip--text {
+    width: 60%;
+}
+
+.coreip--text #coreip_textbox {
+    width: 100%;
+    height: 2em;
+    border: none;
+    border-radius: .5em;
+    color: var(--formDefaultTextColor);
+}
+
+#application--switchips {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1em;
+    margin-left: 2em;
+    margin-right: 2em;
+}
+
+.switchips--text {
+    width: 60%;
+}
+
+.switchips--text #switchips_textbox {
+    width: 100%;
+    border: none;
+    border-radius: .5em;
+    color: var(--formDefaultTextColor);
+    resize: none;
+}
+
+#application--uplinks {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1em;
+    margin-left: 2em;
+    margin-right: 2em;
+}
+
+.uplinks--text {
+    width: 60%;
+}
+
+.uplinks--text #uplinks_textbox {
+    width: 100%;
+    border: none;
+    border-radius: .5em;
+    color: var(--formDefaultTextColor);
+    resize: none;
+}
+
+#application--submit_button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+#submit_mapports {
+    background-color: var(--formButtonColor);
+    width: 90%;
+    margin-top: 1em;
+    margin-bottom: 2em;
+    padding: .25em;
+    font-size: 1.25em;
+    font-weight: 700;
+    text-align: center;
+    border: none;
+    border-radius: .5em;
+    box-shadow: 0 .2em .2em rgb(0, 0, 0, 0.5);
+}
+
+#submit_mapports:hover {
+    background-color: var(--formButtonHoverColor);
+}
