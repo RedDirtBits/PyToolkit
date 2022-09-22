@@ -1,38 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@300;400;500;600;700&display=swap');
 
 :root {
-    --mainTextColor-light: #000;
-    --secondaryTextColor-light: rgb(51 51 51);
-    --mainLinkColor-light: #ffac00;
-    --mainBorderColor-light: rgb(218, 218, 218);
-    --mainBgColor-light: rgb(249, 250,251);
-
-    --mainTextColor-dark: #fff;
-    --secondaryTextColor-dark: #adb0b1;
-    --mainLinkColor-dark: #ffac00;
-    --mainBorderColor-dark: #2b3031;
-    --mainBgColor-dark: #222324;
-
-    --boxesbgcolor: #0757cfa9;
+    --formButtonColor: #0757cfa9;
     --formBgColor: #6d6d6d;
-    
-    --mainTextColor: var(--mainTextColor-dark);
-    --secondaryTextColor: var(--secondaryTextColor-dark);
-    --mainLinkColor: var(--mainLinkColor-dark);
-    --mainBorderColor: var(--mainBorderColor-dark);
-    --mainBgColor: var(--mainBgColor-dark);
+    --formHrColor: #ffac00;
+    --formButtonHoverColor: #ffac00;
+    --formDefaultTextColor: #000;
 }
 
-#wrapper--application {
-    background-color: var(--formBgColor);
-    max-width: 30%;
-    margin: 0 auto;
-    border-radius: .75em;
-    box-shadow: 0 .25em .25em rgb(0, 0, 0, 0.7);
+::placeholder {
+    text-align: center;
 }
 
 #application--form {
-    margin: 0 1.25em;
+    max-width: 550px;
+    margin: 0 auto;
+    background-color: var(--formBgColor);
+    border-radius: .5em;
+    box-shadow: 0 .25em .25em rgb(0, 0, 0, 0.7);
 }
 
 #application--form h2 {
@@ -43,47 +28,30 @@
 #application--form hr {
     margin-top: 1.25em;
     margin-bottom: 1.25em;
-    border: 1px solid var(--mainLinkColor-dark)
+    border: 1px solid var(--formHrColor);
+    width: 90%;
 }
 
 #application--lookup_type {
     display: flex;
-    justify-content: space-between;
-}
-
-#application--lookup_type .radio{
-    padding: .5em;
-}
-
-.hostname_lookup {
-    margin-left: 2em;
-}
-
-.ipaddress_lookup {
-    margin-right: 2em;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 2em;
+    margin-bottom: 2em;
 }
 
 #application--input {
     display: flex;
-    justify-content: center;
     align-items: center;
-    margin-bottom: .75em;
+    justify-content: space-around;
+    margin-bottom: 2em;
 }
 
-#icon {
-    /* margin-left: .5em; */
-    margin-right: .5em;
-}
-
-#host_textbox {
+#application--input #host_textbox {
     width: 90%;
-    color: #000;
     border: none;
-    height: 2em;
-    padding: .75em;
-    margin-top: .75em;
-    font-size: medium;
     border-radius: .5em;
+    height: 2em;
 }
 
 #application--submit_button {
@@ -93,8 +61,8 @@
 }
 
 #submit_lookup {
-    background-color: var(--boxesbgcolor);
-    width: 75%;
+    background-color: var(--formButtonColor);
+    width: 90%;
     margin-top: 1em;
     margin-bottom: 1em;
     padding: .25em;
@@ -107,5 +75,5 @@
 }
 
 #submit_lookup:hover {
-    background-color: var(--mainLinkColor-dark);
+    background-color: var(--formButtonHoverColor);
 }

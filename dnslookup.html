@@ -43,6 +43,7 @@
             <p>
                 The Python DNS Lookup tool performs both forward and reverse DNS lookups
             </p>
+            <h1>Usage</h1>
             <p>
                 Using the application is as straight forward as it appears.  Select whether you want to perform a lookup using a hostname or IP address and click on the <i>Lookup</i> button.
             </p>
@@ -54,17 +55,16 @@
                 <form action="/">
                     <hr>
                     <div id="application--lookup_type">
-                        <div class="hostname_lookup">
-                            <input id="hostname" type="radio" value="none" name="dns_lookup" checked />
-                            <label for="hostname" class="radio">Hostname</label>
+                        <div class="lookup--hostname">
+                            <input id="hostradio" type="radio" value="none" name="dns_lookup" checked />
+                            <label class="radio">Hostname</label>
                         </div>
 
-                        <div class="ipaddress_lookup">
-                            <input type="radio" value="none" id="ipaddress" name="dns_lookup" />
-                            <label for="ipaddress" class="radio">IP Address</label>
+                        <div class="lookup--ipaddress">
+                            <input id="ipradio" type="radio" value="none" name="dns_lookup" />
+                            <label class="radio">IP Address</label>
                         </div>                        
                     </div>
-                    <hr>
                     <div id="application--input">
                         <!-- <label id="icon" for="host"><i class="fa-solid fa-desktop"></i></label> -->
                         <input id="host_textbox" type="text" name="host" placeholder="Hostname or IP Address" required />
