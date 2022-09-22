@@ -22,6 +22,7 @@
     margin: 0 auto;
     background-color: var(--formBgColor);
     border-radius: .5em;
+    box-shadow: 0 .25em .25em rgb(0, 0, 0, 0.7);
 }
 
 #application--form h2 {
